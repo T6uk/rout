@@ -1,0 +1,310 @@
+[
+  {
+    "id": "wrist001",
+    "name": "Wrist Pain Relief Routine",
+    "description": "Targeted exercises for computer workers to relieve wrist pain and prevent repetitive strain injuries",
+    "exercises": [
+      {
+        "id": "ex001",
+        "name": "Wrist Circles",
+        "sets": 2,
+        "reps": "10 each direction",
+        "weight": "bodyweight",
+        "notes": "Rotate wrists 10x clockwise, 10x counterclockwise. Focus on smooth, controlled movement."
+      },
+      {
+        "id": "ex002",
+        "name": "Prayer Stretch",
+        "sets": 1,
+        "reps": "30 seconds",
+        "weight": "bodyweight",
+        "notes": "Palms together, lower hands keeping palms touching. Feel stretch in forearms."
+      },
+      {
+        "id": "ex003",
+        "name": "Reverse Prayer Stretch",
+        "sets": 1,
+        "reps": "30 seconds",
+        "weight": "bodyweight",
+        "notes": "Back of hands together, gently press. Stretch top of forearms."
+      },
+      {
+        "id": "ex004",
+        "name": "Wrist Flexor Stretch",
+        "sets": 1,
+        "reps": "30 seconds each arm",
+        "weight": "bodyweight",
+        "notes": "Arm straight, pull hand back with other hand. Stretch underside of forearm."
+      },
+      {
+        "id": "ex005",
+        "name": "Wrist Extensor Stretch",
+        "sets": 1,
+        "reps": "30 seconds each arm",
+        "weight": "bodyweight",
+        "notes": "Arm straight, push hand down with other hand. Stretch top of forearm."
+      },
+      {
+        "id": "ex006",
+        "name": "Tendon Glides",
+        "sets": 1,
+        "reps": "10 repetitions",
+        "weight": "bodyweight",
+        "notes": "Make fist, then straight fingers, then hook fingers. Promotes tendon mobility."
+      }
+    ],
+    "target_muscle_groups": ["Wrists", "Forearms"],
+    "difficulty": "Beginner",
+    "estimated_duration": 10
+  },
+  {
+    "id": "morning001",
+    "name": "Morning Pain Relief Routine",
+    "description": "Comprehensive 20-minute morning routine to address computer-related pain and stiffness",
+    "exercises": [
+      {
+        "id": "ex007",
+        "name": "Wrist Circles & Stretches",
+        "sets": 1,
+        "reps": "2 minutes",
+        "weight": "bodyweight",
+        "notes": "Complete wrist mobility sequence for pain relief"
+      },
+      {
+        "id": "ex008",
+        "name": "Neck Rolls & Shoulder Shrugs",
+        "sets": 1,
+        "reps": "2 minutes",
+        "weight": "bodyweight",
+        "notes": "Gentle neck mobility and shoulder tension release"
+      },
+      {
+        "id": "ex009",
+        "name": "Cat-Cow Stretches",
+        "sets": 1,
+        "reps": "2 minutes",
+        "weight": "bodyweight",
+        "notes": "Spinal mobility and flexibility, counter desk posture"
+      },
+      {
+        "id": "ex010",
+        "name": "Hip Flexor Stretches",
+        "sets": 1,
+        "reps": "3 minutes",
+        "weight": "bodyweight",
+        "notes": "Counter tight hips from prolonged sitting"
+      },
+      {
+        "id": "ex011",
+        "name": "Knee Circles & Calf Raises",
+        "sets": 1,
+        "reps": "3 minutes",
+        "weight": "bodyweight",
+        "notes": "Knee and ankle health, circulation improvement"
+      },
+      {
+        "id": "ex012",
+        "name": "Deep Breathing Exercises",
+        "sets": 1,
+        "reps": "4 minutes",
+        "weight": "bodyweight",
+        "notes": "Stress relief and oxygenation"
+      },
+      {
+        "id": "ex013",
+        "name": "Spinal Twists & Child's Pose",
+        "sets": 1,
+        "reps": "4 minutes",
+        "weight": "bodyweight",
+        "notes": "Back pain relief and relaxation"
+      }
+    ],
+    "target_muscle_groups": ["Core", "Back", "Shoulders", "Wrists"],
+    "difficulty": "Beginner",
+    "estimated_duration": 20
+  },
+  {
+    "id": "wrist002",
+    "name": "Wrist-Friendly Upper Body Workout",
+    "description": "Alternative exercises for building upper body strength without stressing the wrists",
+    "exercises": [
+      {
+        "id": "ex014",
+        "name": "Chest Press Machine",
+        "sets": 3,
+        "reps": "12-15",
+        "weight": "moderate",
+        "notes": "Replaces push-ups. No wrist weight-bearing, targets chest effectively."
+      },
+      {
+        "id": "ex015",
+        "name": "Dumbbell Chest Press",
+        "sets": 3,
+        "reps": "12-15",
+        "weight": "moderate",
+        "notes": "Alternative to push-ups. Grip dumbbells securely, neutral wrist position."
+      },
+      {
+        "id": "ex016",
+        "name": "Wall Planks",
+        "sets": 3,
+        "reps": "30-60 seconds",
+        "weight": "bodyweight",
+        "notes": "Replaces regular planks. Hands against wall, no wrist pressure."
+      },
+      {
+        "id": "ex017",
+        "name": "Forearm Planks",
+        "sets": 3,
+        "reps": "30-60 seconds",
+        "weight": "bodyweight",
+        "notes": "Core strengthening without wrist stress. Pressure on forearms."
+      },
+      {
+        "id": "ex018",
+        "name": "Forearm Mountain Climbers",
+        "sets": 3,
+        "reps": "20 total",
+        "weight": "bodyweight",
+        "notes": "Elbows on ground instead of hands. High intensity, wrist-safe."
+      },
+      {
+        "id": "ex019",
+        "name": "Modified Burpees",
+        "sets": 3,
+        "reps": "10-12",
+        "weight": "bodyweight",
+        "notes": "Step back instead of jump. Reduces wrist impact while maintaining intensity."
+      },
+      {
+        "id": "ex020",
+        "name": "Chest Fly with Rotation",
+        "sets": 3,
+        "reps": "12-15",
+        "weight": "light-moderate",
+        "notes": "Replaces push-up to T. Same muscle groups, no wrist pressure."
+      }
+    ],
+    "target_muscle_groups": ["Chest", "Core", "Arms", "Shoulders"],
+    "difficulty": "Intermediate",
+    "estimated_duration": 45
+  },
+  {
+    "id": "recovery001",
+    "name": "Recovery & Stretching Routine",
+    "description": "Full body stretching and foam rolling for recovery and pain management",
+    "exercises": [
+      {
+        "id": "ex021",
+        "name": "Leg Stretching Sequence",
+        "sets": 1,
+        "reps": "15 minutes",
+        "weight": "bodyweight",
+        "notes": "Focus on hamstrings, quads, calves, and hip flexors"
+      },
+      {
+        "id": "ex022",
+        "name": "Foam Rolling - Legs",
+        "sets": 1,
+        "reps": "10 minutes",
+        "weight": "bodyweight",
+        "notes": "Roll quads, hamstrings, IT band, and calves slowly"
+      },
+      {
+        "id": "ex023",
+        "name": "Full Body Stretching",
+        "sets": 1,
+        "reps": "20 minutes",
+        "weight": "bodyweight",
+        "notes": "Complete body stretching sequence for all major muscle groups"
+      },
+      {
+        "id": "ex024",
+        "name": "Foam Rolling - Full Body",
+        "sets": 1,
+        "reps": "15 minutes",
+        "weight": "bodyweight",
+        "notes": "Focus on back, shoulders, legs, and any tight areas"
+      }
+    ],
+    "target_muscle_groups": ["Legs", "Back", "Shoulders", "Core"],
+    "difficulty": "Beginner",
+    "estimated_duration": 60
+  },
+  {
+    "id": "game001",
+    "name": "Pre-Game Football Preparation",
+    "description": "Light warm-up routine specifically designed for football match preparation",
+    "exercises": [
+      {
+        "id": "ex025",
+        "name": "Dynamic Warm-up",
+        "sets": 1,
+        "reps": "10 minutes",
+        "weight": "bodyweight",
+        "notes": "Leg swings, arm circles, light jogging in place"
+      },
+      {
+        "id": "ex026",
+        "name": "Ball Touches",
+        "sets": 3,
+        "reps": "2 minutes each",
+        "weight": "football",
+        "notes": "Light ball work to get touch and rhythm"
+      },
+      {
+        "id": "ex027",
+        "name": "Movement Patterns",
+        "sets": 1,
+        "reps": "15 minutes",
+        "weight": "bodyweight",
+        "notes": "Shuffles, cutting movements, acceleration drills"
+      },
+      {
+        "id": "ex028",
+        "name": "Mental Preparation",
+        "sets": 1,
+        "reps": "10 minutes",
+        "weight": "bodyweight",
+        "notes": "Visualization, breathing exercises, focus techniques"
+      }
+    ],
+    "target_muscle_groups": ["Legs", "Core", "Cardio"],
+    "difficulty": "Intermediate",
+    "estimated_duration": 45
+  },
+  {
+    "id": "emergency001",
+    "name": "Emergency Busy Day Minimum",
+    "description": "Quick essential exercises for extremely busy days - absolute minimums",
+    "exercises": [
+      {
+        "id": "ex029",
+        "name": "Essential Wrist Relief",
+        "sets": 1,
+        "reps": "10 minutes",
+        "weight": "bodyweight",
+        "notes": "Non-negotiable pain relief routine for wrists and neck"
+      },
+      {
+        "id": "ex030",
+        "name": "Bodyweight Circuit",
+        "sets": 1,
+        "reps": "20 minutes",
+        "weight": "bodyweight",
+        "notes": "Quick high-intensity bodyweight exercises or brisk walk"
+      },
+      {
+        "id": "ex031",
+        "name": "Evening Stretches",
+        "sets": 1,
+        "reps": "10 minutes",
+        "weight": "bodyweight",
+        "notes": "Essential stretching routine to prevent stiffness"
+      }
+    ],
+    "target_muscle_groups": ["Wrists", "Core", "Legs"],
+    "difficulty": "Beginner",
+    "estimated_duration": 40
+  }
+]

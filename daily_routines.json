@@ -1,0 +1,931 @@
+[
+  {
+    "id": "mon001",
+    "name": "Monday Routine",
+    "date": "2025-06-02",
+    "tasks": [
+      {
+        "id": "task001",
+        "name": "Wake Up & Pain Relief",
+        "description": "Wrist circles \u00e2\u20ac\u00a2 Neck rolls \u00e2\u20ac\u00a2 Cat-cow \u00e2\u20ac\u00a2 Hip flexors \u00e2\u20ac\u00a2 Knee circles \u00e2\u20ac\u00a2 Breathing",
+        "time": "06:00",
+        "duration": 20,
+        "category": "Morning",
+        "completed": true
+      },
+      {
+        "id": "task002",
+        "name": "Workout",
+        "description": "Morning exercise session",
+        "time": "06:30",
+        "duration": 60,
+        "category": "Exercise",
+        "completed": true
+      },
+      {
+        "id": "task003",
+        "name": "Breakfast",
+        "description": "Oatmeal + banana + berries + protein powder + coffee",
+        "time": "07:30",
+        "duration": 30,
+        "category": "Morning",
+        "completed": true
+      },
+      {
+        "id": "task004",
+        "name": "Work Session 1",
+        "description": "Focus work time",
+        "time": "08:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": true
+      },
+      {
+        "id": "task005",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Neck/shoulder stretches + walk around",
+        "time": "10:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": true
+      },
+      {
+        "id": "task006",
+        "name": "Work Session 2",
+        "description": "Focus work time",
+        "time": "10:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": true
+      },
+      {
+        "id": "task007",
+        "name": "Lunch",
+        "description": "Grilled chicken + rice + mixed vegetables + salad",
+        "time": "12:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": true
+      },
+      {
+        "id": "task008",
+        "name": "Work Session 3",
+        "description": "Focus work time",
+        "time": "13:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": true
+      },
+      {
+        "id": "task009",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Back stretches + eye exercises",
+        "time": "15:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": true
+      },
+      {
+        "id": "task010",
+        "name": "Work Session 4",
+        "description": "Focus work time",
+        "time": "15:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": true
+      },
+      {
+        "id": "task011",
+        "name": "Study Time",
+        "description": "Random topic",
+        "time": "17:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": true
+      },
+      {
+        "id": "task012",
+        "name": "Dinner",
+        "description": "Chicken thighs + sweet potato + steamed broccoli",
+        "time": "18:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": true
+      },
+      {
+        "id": "task013",
+        "name": "Brain Training",
+        "description": "Sudoku/memory games/chess/reading",
+        "time": "19:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task014",
+        "name": "Personal Time",
+        "description": "Stretching + relaxation + tomorrow prep",
+        "time": "20:30",
+        "duration": 90,
+        "category": "Evening",
+        "completed": false
+      },
+      {
+        "id": "task015",
+        "name": "Sleep Prep",
+        "description": "No screens + chamomile tea + breathing",
+        "time": "22:00",
+        "duration": 30,
+        "category": "Evening",
+        "completed": false
+      }
+    ],
+    "notes": "Monday routine focused on starting the week strong with consistent pain management"
+  },
+  {
+    "id": "tue002",
+    "name": "Tuesday Routine",
+    "date": "2025-06-03",
+    "tasks": [
+      {
+        "id": "task016",
+        "name": "Wake Up & Pain Relief",
+        "description": "Wrist circles \u00e2\u20ac\u00a2 Full routine - focus on legs/hips",
+        "time": "06:00",
+        "duration": 20,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task017",
+        "name": "Workout",
+        "description": "Morning exercise session",
+        "time": "06:30",
+        "duration": 60,
+        "category": "Exercise",
+        "completed": false
+      },
+      {
+        "id": "task018",
+        "name": "Breakfast",
+        "description": "Greek yogurt + granola + berries + honey",
+        "time": "07:30",
+        "duration": 30,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task019",
+        "name": "Work Session 1",
+        "description": "Focus work time",
+        "time": "08:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task020",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Neck/shoulder stretches + walk around",
+        "time": "10:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task021",
+        "name": "Work Session 2",
+        "description": "Focus work time",
+        "time": "10:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task022",
+        "name": "Lunch",
+        "description": "Turkey avocado wrap + side salad",
+        "time": "12:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task023",
+        "name": "Work Session 3",
+        "description": "Focus work time",
+        "time": "13:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task024",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Back stretches + eye exercises",
+        "time": "15:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task025",
+        "name": "Work Session 4",
+        "description": "Focus work time",
+        "time": "15:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task026",
+        "name": "Study Time",
+        "description": "Random Topic",
+        "time": "17:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task027",
+        "name": "Dinner",
+        "description": "Lean beef/chicken + quinoa + roasted vegetables",
+        "time": "18:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task028",
+        "name": "Brain Training",
+        "description": "Logic puzzles/pattern recognition/mental math",
+        "time": "19:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task029",
+        "name": "Recovery Time",
+        "description": "Leg stretching + foam rolling",
+        "time": "20:30",
+        "duration": 90,
+        "category": "Evening",
+        "completed": false
+      },
+      {
+        "id": "task030",
+        "name": "Sleep Prep",
+        "description": "No screens + relaxation",
+        "time": "22:00",
+        "duration": 30,
+        "category": "Evening",
+        "completed": false
+      }
+    ],
+    "notes": "Tuesday routine with extra focus on legs/hips and logic-based brain training"
+  },
+  {
+    "id": "wed003",
+    "name": "Wednesday Routine",
+    "date": "2025-06-04",
+    "tasks": [
+      {
+        "id": "task031",
+        "name": "Extended Wake Up",
+        "description": "Wrist circles \u00e2\u20ac\u00a2 Extended pain relief + extra flexibility for problem areas",
+        "time": "06:00",
+        "duration": 45,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task032",
+        "name": "Workout",
+        "description": "Morning exercise session",
+        "time": "06:45",
+        "duration": 45,
+        "category": "Exercise",
+        "completed": false
+      },
+      {
+        "id": "task033",
+        "name": "Breakfast",
+        "description": "Scrambled eggs + vegetables + whole grain toast",
+        "time": "07:30",
+        "duration": 30,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task034",
+        "name": "Work Session 1",
+        "description": "Focus work time",
+        "time": "08:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task035",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Neck/shoulder stretches + walk around",
+        "time": "10:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task036",
+        "name": "Work Session 2",
+        "description": "Focus work time",
+        "time": "10:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task037",
+        "name": "Lunch",
+        "description": "Chicken and vegetable soup + bread + small salad",
+        "time": "12:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task038",
+        "name": "Work Session 3",
+        "description": "Focus work time",
+        "time": "13:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task039",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Back stretches + eye exercises",
+        "time": "15:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task040",
+        "name": "Work Session 4",
+        "description": "Focus work time",
+        "time": "15:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task041",
+        "name": "Study Time",
+        "description": "Random Topic",
+        "time": "17:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task042",
+        "name": "Dinner",
+        "description": "Grilled chicken drumsticks + baked potato + green beans",
+        "time": "18:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task043",
+        "name": "Brain Training",
+        "description": "Memory exercises/word games/creative thinking",
+        "time": "19:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task044",
+        "name": "Relaxation",
+        "description": "Extended stretching + meditation + journaling",
+        "time": "20:30",
+        "duration": 90,
+        "category": "Evening",
+        "completed": false
+      },
+      {
+        "id": "task045",
+        "name": "Sleep Prep",
+        "description": "Deep relaxation focus",
+        "time": "22:00",
+        "duration": 30,
+        "category": "Evening",
+        "completed": false
+      }
+    ],
+    "notes": "Wednesday mid-week routine with extended pain relief and relaxation focus"
+  },
+  {
+    "id": "thu004",
+    "name": "Thursday Routine",
+    "date": "2025-06-05",
+    "tasks": [
+      {
+        "id": "task046",
+        "name": "Morning Pain Relief",
+        "description": "Wrist circles \u00e2\u20ac\u00a2 Standard routine - full body focus",
+        "time": "06:00",
+        "duration": 20,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task047",
+        "name": "Workout",
+        "description": "Morning exercise session",
+        "time": "06:30",
+        "duration": 60,
+        "category": "Exercise",
+        "completed": false
+      },
+      {
+        "id": "task048",
+        "name": "Breakfast",
+        "description": "Protein smoothie (banana + spinach + protein + oats)",
+        "time": "07:30",
+        "duration": 30,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task049",
+        "name": "Work Session 1",
+        "description": "Focus work time",
+        "time": "08:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task050",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Neck/shoulder stretches + walk around",
+        "time": "10:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task051",
+        "name": "Work Session 2",
+        "description": "Focus work time",
+        "time": "10:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task052",
+        "name": "Lunch",
+        "description": "Chicken Caesar salad + whole grain croutons",
+        "time": "12:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task053",
+        "name": "Work Session 3",
+        "description": "Focus work time",
+        "time": "13:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task054",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Back stretches + eye exercises",
+        "time": "15:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task055",
+        "name": "Work Session 4",
+        "description": "Focus work time",
+        "time": "15:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task056",
+        "name": "Study Time",
+        "description": "Random Topic",
+        "time": "17:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task057",
+        "name": "Dinner",
+        "description": "Pork tenderloin + brown rice + mixed vegetables",
+        "time": "18:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task058",
+        "name": "Brain Training",
+        "description": "Strategy games/problem-solving/critical thinking",
+        "time": "19:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task059",
+        "name": "Recovery",
+        "description": "Full body stretching + foam rolling",
+        "time": "20:30",
+        "duration": 90,
+        "category": "Evening",
+        "completed": false
+      },
+      {
+        "id": "task060",
+        "name": "Sleep Prep",
+        "description": "Recovery focus",
+        "time": "22:00",
+        "duration": 30,
+        "category": "Evening",
+        "completed": false
+      }
+    ],
+    "notes": "Thursday routine with strategy-focused brain training and full body recovery"
+  },
+  {
+    "id": "fri005",
+    "name": "Friday Routine",
+    "date": "2025-06-06",
+    "tasks": [
+      {
+        "id": "task061",
+        "name": "Extended Morning Routine",
+        "description": "Wrist circles \u00e2\u20ac\u00a2 Gentle pain relief + extra time for problem areas",
+        "time": "06:00",
+        "duration": 30,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task062",
+        "name": "Workout",
+        "description": "Morning exercise session",
+        "time": "06:30",
+        "duration": 30,
+        "category": "Exercise",
+        "completed": false
+      },
+      {
+        "id": "task063",
+        "name": "Relaxed Breakfast",
+        "description": "Weekend-style: Pancakes with fruit OR eggs Benedict",
+        "time": "07:00",
+        "duration": 60,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task064",
+        "name": "Work Session 1",
+        "description": "Focus work time",
+        "time": "08:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task065",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Neck/shoulder stretches + walk around",
+        "time": "10:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task066",
+        "name": "Work Session 2",
+        "description": "Focus work time",
+        "time": "10:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task067",
+        "name": "Lunch",
+        "description": "Homemade soup + sandwich",
+        "time": "12:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task068",
+        "name": "Work Session 3",
+        "description": "Focus work time",
+        "time": "13:00",
+        "duration": 120,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task069",
+        "name": "Break",
+        "description": "Wrist stretches \u00e2\u20ac\u00a2 Back stretches + eye exercises",
+        "time": "15:00",
+        "duration": 5,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task070",
+        "name": "Work Session 4",
+        "description": "Focus work time",
+        "time": "15:05",
+        "duration": 115,
+        "category": "Work",
+        "completed": false
+      },
+      {
+        "id": "task071",
+        "name": "Study Time",
+        "description": "Random Topic",
+        "time": "17:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task072",
+        "name": "Dinner",
+        "description": "Pasta with meat sauce + side salad",
+        "time": "18:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task073",
+        "name": "Brain Training",
+        "description": "Creative exercises/lateral thinking/artistic challenges",
+        "time": "19:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task074",
+        "name": "Social Time",
+        "description": "Friends + hobbies + weekend preparation",
+        "time": "20:30",
+        "duration": 90,
+        "category": "Evening",
+        "completed": false
+      },
+      {
+        "id": "task075",
+        "name": "Sleep Prep",
+        "description": "Relaxed evening routine",
+        "time": "22:00",
+        "duration": 30,
+        "category": "Evening",
+        "completed": false
+      }
+    ],
+    "notes": "Friday routine with relaxed pace and creative focus to prepare for the weekend"
+  },
+  {
+    "id": "sat006",
+    "name": "Saturday Routine",
+    "date": "2025-06-07",
+    "tasks": [
+      {
+        "id": "task076",
+        "name": "Morning Routine",
+        "description": "Wrist circles \u00e2\u20ac\u00a2 Pain relief at weekend pace - no rush",
+        "time": "06:30",
+        "duration": 30,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task077",
+        "name": "Workout",
+        "description": "Extended weekend workout session",
+        "time": "07:00",
+        "duration": 90,
+        "category": "Exercise",
+        "completed": false
+      },
+      {
+        "id": "task078",
+        "name": "Big Breakfast",
+        "description": "Eggs + bacon/sausage + hash browns + fruit",
+        "time": "08:30",
+        "duration": 60,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task079",
+        "name": "Study Time",
+        "description": "Random Topic",
+        "time": "10:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task080",
+        "name": "Personal Time",
+        "description": "Relaxation + preparation",
+        "time": "11:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task081",
+        "name": "Lunch",
+        "description": "Hearty meal to fuel for tomorrow's game",
+        "time": "12:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task082",
+        "name": "Afternoon Activities",
+        "description": "Meal prep for week + social activities + relaxation",
+        "time": "13:00",
+        "duration": 240,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task083",
+        "name": "Personal Time",
+        "description": "Free time + early dinner",
+        "time": "17:00",
+        "duration": 120,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task084",
+        "name": "Brain Training",
+        "description": "Light games/puzzles (keep it easy)",
+        "time": "19:30",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task085",
+        "name": "Early Sleep",
+        "description": "Prepare for game day - aim for 10+ hours sleep",
+        "time": "21:00",
+        "duration": 60,
+        "category": "Evening",
+        "completed": false
+      }
+    ],
+    "notes": "Saturday prep day for Sunday's football match with meal prep and early sleep"
+  },
+  {
+    "id": "sun007",
+    "name": "Sunday Game Day Routine",
+    "date": "2025-06-08",
+    "tasks": [
+      {
+        "id": "task086",
+        "name": "Game Day Morning",
+        "description": "Wrist circles \u00e2\u20ac\u00a2 Light pain relief routine + mental preparation",
+        "time": "07:00",
+        "duration": 30,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task087",
+        "name": "Pre-Game Meal",
+        "description": "Oatmeal + banana (light and energizing)",
+        "time": "07:30",
+        "duration": 60,
+        "category": "Morning",
+        "completed": false
+      },
+      {
+        "id": "task088",
+        "name": "Game Preparation",
+        "description": "Light warm-up + proper hydration + mental prep",
+        "time": "08:30",
+        "duration": 150,
+        "category": "Exercise",
+        "completed": false
+      },
+      {
+        "id": "task089",
+        "name": "FOOTBALL MATCH",
+        "description": "Apply weekly training - give your best effort!",
+        "time": "11:00",
+        "duration": 180,
+        "category": "Exercise",
+        "completed": false
+      },
+      {
+        "id": "task090",
+        "name": "Post-Game Recovery",
+        "description": "Cool-down + initial recovery + hydration",
+        "time": "14:00",
+        "duration": 60,
+        "category": "Exercise",
+        "completed": false
+      },
+      {
+        "id": "task091",
+        "name": "Recovery Meal",
+        "description": "Protein-rich meal for muscle recovery",
+        "time": "15:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task092",
+        "name": "Active Recovery",
+        "description": "Light stretching + ice bath if needed",
+        "time": "16:00",
+        "duration": 60,
+        "category": "Exercise",
+        "completed": false
+      },
+      {
+        "id": "task093",
+        "name": "Study Time",
+        "description": "Topic: Sports Science & Athletic Performance",
+        "time": "17:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task094",
+        "name": "Dinner",
+        "description": "Recovery-focused meal",
+        "time": "18:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task095",
+        "name": "Brain Training",
+        "description": "Light, relaxing mental exercises",
+        "time": "19:00",
+        "duration": 60,
+        "category": "Personal",
+        "completed": false
+      },
+      {
+        "id": "task096",
+        "name": "Recovery Time",
+        "description": "Stretching + relaxation + tomorrow prep",
+        "time": "20:00",
+        "duration": 60,
+        "category": "Evening",
+        "completed": false
+      },
+      {
+        "id": "task097",
+        "name": "Early Sleep",
+        "description": "Aim for 9+ hours recovery sleep",
+        "time": "21:00",
+        "duration": 60,
+        "category": "Evening",
+        "completed": false
+      }
+    ],
+    "notes": "Sunday game day routine focused on football performance and post-game recovery"
+  }
+]

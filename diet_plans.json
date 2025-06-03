@@ -1,0 +1,248 @@
+[
+  {
+    "id": "weekday001",
+    "name": "Standard Weekday Nutrition Plan",
+    "description": "Balanced nutrition plan for regular work days with optimal energy and focus",
+    "meals": [
+      {
+        "id": "meal001",
+        "name": "Power Breakfast",
+        "calories": 450,
+        "protein": 25.0,
+        "carbs": 55.0,
+        "fat": 12.0,
+        "ingredients": ["oatmeal", "banana", "mixed berries", "protein powder", "coffee"],
+        "notes": "High protein breakfast to fuel morning workout and work sessions"
+      },
+      {
+        "id": "meal002",
+        "name": "Balanced Lunch",
+        "calories": 550,
+        "protein": 35.0,
+        "carbs": 45.0,
+        "fat": 18.0,
+        "ingredients": ["grilled chicken breast", "brown rice", "mixed vegetables", "side salad", "olive oil dressing"],
+        "notes": "Lean protein with complex carbs for sustained afternoon energy"
+      },
+      {
+        "id": "meal003",
+        "name": "Recovery Dinner",
+        "calories": 500,
+        "protein": 30.0,
+        "carbs": 40.0,
+        "fat": 20.0,
+        "ingredients": ["chicken thighs", "sweet potato", "steamed broccoli"],
+        "notes": "Nutrient-dense dinner to support recovery and sleep quality"
+      }
+    ],
+    "daily_calories": 1500,
+    "daily_protein": 90.0,
+    "daily_carbs": 140.0,
+    "daily_fat": 50.0
+  },
+  {
+    "id": "variety001",
+    "name": "Variety Nutrition Plan",
+    "description": "Diverse meal plan with different protein sources and flavors throughout the week",
+    "meals": [
+      {
+        "id": "meal004",
+        "name": "Greek Yogurt Breakfast",
+        "calories": 400,
+        "protein": 20.0,
+        "carbs": 50.0,
+        "fat": 15.0,
+        "ingredients": ["Greek yogurt", "granola", "fresh berries", "honey"],
+        "notes": "Probiotic-rich breakfast with natural sweetness"
+      },
+      {
+        "id": "meal005",
+        "name": "Turkey Avocado Wrap",
+        "calories": 520,
+        "protein": 28.0,
+        "carbs": 40.0,
+        "fat": 25.0,
+        "ingredients": ["turkey breast", "avocado", "whole wheat wrap", "mixed greens", "tomato"],
+        "notes": "Portable lunch with healthy fats and lean protein"
+      },
+      {
+        "id": "meal006",
+        "name": "Beef & Quinoa Bowl",
+        "calories": 580,
+        "protein": 32.0,
+        "carbs": 45.0,
+        "fat": 22.0,
+        "ingredients": ["lean beef", "quinoa", "roasted vegetables", "herbs"],
+        "notes": "Complete protein with superfood quinoa and antioxidant-rich vegetables"
+      }
+    ],
+    "daily_calories": 1500,
+    "daily_protein": 80.0,
+    "daily_carbs": 135.0,
+    "daily_fat": 62.0
+  },
+  {
+    "id": "comfort001",
+    "name": "Comfort Food Plan",
+    "description": "Healthier versions of comfort foods for mental well-being and satisfaction",
+    "meals": [
+      {
+        "id": "meal007",
+        "name": "Veggie Scramble",
+        "calories": 420,
+        "protein": 22.0,
+        "carbs": 35.0,
+        "fat": 20.0,
+        "ingredients": ["eggs", "mixed vegetables", "whole grain toast", "cheese"],
+        "notes": "Satisfying breakfast with vegetables for extra nutrients"
+      },
+      {
+        "id": "meal008",
+        "name": "Hearty Soup & Bread",
+        "calories": 480,
+        "protein": 25.0,
+        "carbs": 50.0,
+        "fat": 18.0,
+        "ingredients": ["chicken", "vegetables", "beans", "whole grain bread", "small salad"],
+        "notes": "Warming, filling meal perfect for comfort and nutrition"
+      },
+      {
+        "id": "meal009",
+        "name": "Pasta Night",
+        "calories": 600,
+        "protein": 28.0,
+        "carbs": 65.0,
+        "fat": 22.0,
+        "ingredients": ["whole grain pasta", "lean meat sauce", "side salad", "olive oil"],
+        "notes": "Classic comfort food with lean protein and complex carbs"
+      }
+    ],
+    "daily_calories": 1500,
+    "daily_protein": 75.0,
+    "daily_carbs": 150.0,
+    "daily_fat": 60.0
+  },
+  {
+    "id": "weekend001",
+    "name": "Weekend Indulgence Plan",
+    "description": "Relaxed weekend nutrition with some indulgences while maintaining balance",
+    "meals": [
+      {
+        "id": "meal010",
+        "name": "Weekend Pancakes",
+        "calories": 550,
+        "protein": 18.0,
+        "carbs": 70.0,
+        "fat": 20.0,
+        "ingredients": ["whole grain pancakes", "fresh fruit", "maple syrup", "greek yogurt"],
+        "notes": "Weekend treat with protein addition for balance"
+      },
+      {
+        "id": "meal011",
+        "name": "Hearty Fuel Lunch",
+        "calories": 650,
+        "protein": 35.0,
+        "carbs": 55.0,
+        "fat": 25.0,
+        "ingredients": ["lean protein", "complex carbs", "vegetables", "healthy fats"],
+        "notes": "Substantial meal to fuel weekend activities and game preparation"
+      },
+      {
+        "id": "meal012",
+        "name": "Big Weekend Breakfast",
+        "calories": 700,
+        "protein": 30.0,
+        "carbs": 45.0,
+        "fat": 35.0,
+        "ingredients": ["eggs", "bacon", "hash browns", "fruit", "toast"],
+        "notes": "Traditional big breakfast for weekend energy and satisfaction"
+      }
+    ],
+    "daily_calories": 1900,
+    "daily_protein": 83.0,
+    "daily_carbs": 170.0,
+    "daily_fat": 80.0
+  },
+  {
+    "id": "gameday001",
+    "name": "Game Day Nutrition Plan",
+    "description": "Optimized nutrition for football match days focusing on energy and recovery",
+    "meals": [
+      {
+        "id": "meal013",
+        "name": "Pre-Game Light Breakfast",
+        "calories": 350,
+        "protein": 12.0,
+        "carbs": 65.0,
+        "fat": 8.0,
+        "ingredients": ["oatmeal", "banana", "honey"],
+        "notes": "Light, easily digestible carbs for quick energy without feeling heavy"
+      },
+      {
+        "id": "meal014",
+        "name": "Post-Game Recovery Meal",
+        "calories": 600,
+        "protein": 40.0,
+        "carbs": 50.0,
+        "fat": 20.0,
+        "ingredients": ["lean protein", "complex carbs", "anti-inflammatory foods", "electrolytes"],
+        "notes": "High protein for muscle recovery with carbs to replenish glycogen"
+      },
+      {
+        "id": "meal015",
+        "name": "Recovery Dinner",
+        "calories": 550,
+        "protein": 35.0,
+        "carbs": 45.0,
+        "fat": 22.0,
+        "ingredients": ["quality protein", "nutrient-dense carbs", "recovery vegetables"],
+        "notes": "Nutrient-dense meal to support overnight recovery and sleep"
+      }
+    ],
+    "daily_calories": 1500,
+    "daily_protein": 87.0,
+    "daily_carbs": 160.0,
+    "daily_fat": 50.0
+  },
+  {
+    "id": "smoothie001",
+    "name": "Smoothie & Light Meals Plan",
+    "description": "Easy-to-digest meals focusing on smoothies and lighter options for busy days",
+    "meals": [
+      {
+        "id": "meal016",
+        "name": "Green Power Smoothie",
+        "calories": 380,
+        "protein": 25.0,
+        "carbs": 45.0,
+        "fat": 12.0,
+        "ingredients": ["banana", "spinach", "protein powder", "oats", "almond milk"],
+        "notes": "Nutrient-packed smoothie with greens and protein for sustained energy"
+      },
+      {
+        "id": "meal017",
+        "name": "Caesar Salad with Protein",
+        "calories": 520,
+        "protein": 30.0,
+        "carbs": 25.0,
+        "fat": 32.0,
+        "ingredients": ["chicken breast", "romaine lettuce", "parmesan", "whole grain croutons", "caesar dressing"],
+        "notes": "Classic salad with added protein and healthy croutons"
+      },
+      {
+        "id": "meal018",
+        "name": "Lean Protein & Rice",
+        "calories": 500,
+        "protein": 32.0,
+        "carbs": 50.0,
+        "fat": 18.0,
+        "ingredients": ["pork tenderloin", "brown rice", "mixed vegetables", "herbs"],
+        "notes": "Simple, clean meal with lean protein and complex carbs"
+      }
+    ],
+    "daily_calories": 1400,
+    "daily_protein": 87.0,
+    "daily_carbs": 120.0,
+    "daily_fat": 62.0
+  }
+]
