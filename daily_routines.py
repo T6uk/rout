@@ -9,120 +9,122 @@ import pandas as pd
 from models import DailyRoutine, RoutineTask, dict_to_daily_routine, generate_id
 from data_manager import get_data_manager
 
-# Enhanced CSS for daily routines
-st.markdown("""
-<style>
-    /* Task card styling */
-    .task-card {
-        background: white;
-        border-radius: 12px;
-        padding: 1rem;
-        margin: 0.5rem 0;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        border-left: 4px solid #e0e0e0;
-        transition: all 0.3s ease;
-    }
 
-    .task-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    }
+def load_daily_routines_css():
+    """Load CSS for daily routines page"""
+    st.markdown("""
+    <style>
+        /* Task card styling */
+        .task-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
 
-    .task-completed {
-        background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-        border-left: 4px solid #28a745 !important;
-    }
+        .task-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
 
-    .task-current {
-        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-        border-left: 4px solid #ffc107 !important;
-        animation: pulse 2s infinite;
-    }
+        .task-completed {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-left: 4px solid #28a745 !important;
+        }
 
-    .task-upcoming {
-        background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
-        border-left: 4px solid #17a2b8 !important;
-    }
+        .task-current {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 4px solid #ffc107 !important;
+            animation: pulse 2s infinite;
+        }
 
-    .task-overdue {
-        background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
-        border-left: 4px solid #dc3545 !important;
-    }
+        .task-upcoming {
+            background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+            border-left: 4px solid #17a2b8 !important;
+        }
 
-    @keyframes pulse {
-        0% { opacity: 1; }
-        50% { opacity: 0.8; }
-        100% { opacity: 1; }
-    }
+        .task-overdue {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border-left: 4px solid #dc3545 !important;
+        }
 
-    /* Category badges */
-    .category-badge {
-        display: inline-block;
-        padding: 0.25rem 0.75rem;
-        border-radius: 15px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        margin-right: 0.5rem;
-    }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
 
-    .category-morning { background: #ffeaa7; color: #2d3436; }
-    .category-work { background: #74b9ff; color: white; }
-    .category-exercise { background: #fd79a8; color: white; }
-    .category-personal { background: #00b894; color: white; }
-    .category-evening { background: #6c5ce7; color: white; }
+        /* Category badges */
+        .category-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
 
-    /* Progress ring */
-    .progress-ring {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto;
-    }
+        .category-morning { background: #ffeaa7; color: #2d3436; }
+        .category-work { background: #74b9ff; color: white; }
+        .category-exercise { background: #fd79a8; color: white; }
+        .category-personal { background: #00b894; color: white; }
+        .category-evening { background: #6c5ce7; color: white; }
 
-    /* Time indicator */
-    .time-indicator {
-        display: inline-block;
-        padding: 0.25rem 0.5rem;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 0.9rem;
-    }
+        /* Progress ring */
+        .progress-ring {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+        }
 
-    .time-current { background: #ffc107; color: #212529; }
-    .time-upcoming { background: #17a2b8; color: white; }
-    .time-completed { background: #28a745; color: white; }
-    .time-overdue { background: #dc3545; color: white; }
+        /* Time indicator */
+        .time-indicator {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
 
-    /* Form enhancements */
-    .form-section {
-        background: #f8f9fa;
-        padding: 1.5rem;
-        border-radius: 10px;
-        margin: 1rem 0;
-        border: 1px solid #dee2e6;
-    }
+        .time-current { background: #ffc107; color: #212529; }
+        .time-upcoming { background: #17a2b8; color: white; }
+        .time-completed { background: #28a745; color: white; }
+        .time-overdue { background: #dc3545; color: white; }
 
-    /* Stats cards */
-    .stat-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 1rem;
-        border-radius: 10px;
-        text-align: center;
-        margin: 0.5rem 0;
-    }
+        /* Form enhancements */
+        .form-section {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border: 1px solid #dee2e6;
+        }
 
-    .stat-card h4 {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: bold;
-    }
+        /* Stats cards */
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
 
-    .stat-card p {
-        margin: 0.25rem 0 0 0;
-        opacity: 0.9;
-    }
-</style>
-""", unsafe_allow_html=True)
+        .stat-card h4 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .stat-card p {
+            margin: 0.25rem 0 0 0;
+            opacity: 0.9;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 
 def get_task_status(task_time: str, completed: bool) -> str:
@@ -166,6 +168,9 @@ def get_category_badge(category: str) -> str:
 
 def render_daily_routines_page():
     """Render the enhanced daily routines page"""
+    # Load CSS first
+    load_daily_routines_css()
+
     st.title("📅 Daily Routines")
     st.markdown("*Organize your day, track your progress, achieve your goals*")
 
@@ -342,7 +347,7 @@ def render_enhanced_routine_details(routine: DailyRoutine, routines_data: List[d
             annotations=[dict(text=f'{progress:.0%}', x=0.5, y=0.5, font_size=20, showarrow=False)]
         )
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key=f"progress_chart_{routine.id}")
 
     # Task filtering and sorting
     col_filter1, col_filter2, col_filter3 = st.columns(3)
@@ -422,24 +427,6 @@ def render_enhanced_task_card(task: RoutineTask, routine: DailyRoutine, routines
     """Render an enhanced task card with improved interactions"""
     task_status = get_task_status(task.time, task.completed)
 
-    # Determine card styling
-    card_classes = {
-        "completed": "task-card task-completed",
-        "current": "task-card task-current",
-        "upcoming": "task-card task-upcoming",
-        "overdue": "task-card task-overdue"
-    }
-
-    time_classes = {
-        "completed": "time-completed",
-        "current": "time-current",
-        "upcoming": "time-upcoming",
-        "overdue": "time-overdue"
-    }
-
-    card_class = card_classes.get(task_status, "task-card")
-    time_class = time_classes.get(task_status, "time-upcoming")
-
     # Task card container
     with st.container():
         col1, col2 = st.columns([1, 10])
@@ -453,29 +440,46 @@ def render_enhanced_task_card(task: RoutineTask, routine: DailyRoutine, routines
             )
 
         with col2:
-            # Calculate time until/since task
+            # Display task information using streamlit components instead of HTML
             time_info = get_time_info(task.time, task.completed)
 
-            st.markdown(f"""
-            <div class="{card_class}">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                    <div>
-                        <span class="time-indicator {time_class}">{task.time}</span>
-                        <strong style="margin-left: 0.5rem; font-size: 1.1rem;">{task.name}</strong>
-                    </div>
-                    <div style="text-align: right; font-size: 0.9rem; color: #6c757d;">
-                        <div>{task.duration} min</div>
-                        <div style="font-size: 0.8rem;">{time_info}</div>
-                    </div>
-                </div>
+            # Time and task name row
+            col_time, col_name, col_duration = st.columns([1, 3, 1])
 
-                {get_category_badge(task.category)}
+            with col_time:
+                if task_status == "completed":
+                    st.success(f"**{task.time}**")
+                elif task_status == "current":
+                    st.warning(f"**{task.time}**")
+                elif task_status == "overdue":
+                    st.error(f"**{task.time}**")
+                else:
+                    st.info(f"**{task.time}**")
 
-                {f'<div style="margin-top: 0.5rem; font-style: italic; color: #6c757d;">{task.description}</div>' if task.description else ''}
+            with col_name:
+                st.markdown(f"**{task.name}**")
 
-                {render_task_progress_bar(task) if task_status == "current" else ''}
-            </div>
-            """, unsafe_allow_html=True)
+            with col_duration:
+                st.write(f"{task.duration} min")
+                st.caption(time_info)
+
+            # Category badge
+            if task.category == "Morning":
+                st.markdown("🌅 Morning")
+            elif task.category == "Work":
+                st.markdown("💼 Work")
+            elif task.category == "Exercise":
+                st.markdown("💪 Exercise")
+            elif task.category == "Personal":
+                st.markdown("👤 Personal")
+            elif task.category == "Evening":
+                st.markdown("🌙 Evening")
+
+            # Description
+            if task.description:
+                st.caption(task.description)
+
+            st.markdown("---")
 
         # Update completion status if changed
         if new_status != task.completed:
@@ -590,9 +594,9 @@ def render_view_routines():
         filtered_routines.sort(key=lambda x: len(x['tasks']), reverse=True)
 
     # Display routines with enhanced cards
-    for routine_data in filtered_routines:
+    for i, routine_data in enumerate(filtered_routines):
         routine = dict_to_daily_routine(routine_data)
-        render_routine_preview_card(routine)
+        render_routine_preview_card(routine, i)
 
 
 def filter_routines(routines_data: List[dict], date_filter: str, completion_filter: str) -> List[dict]:
@@ -635,7 +639,7 @@ def calculate_completion_rate(routine_data: dict) -> float:
     return completed / total if total > 0 else 0
 
 
-def render_routine_preview_card(routine: DailyRoutine):
+def render_routine_preview_card(routine: DailyRoutine, index: int):
     """Render a preview card for a routine"""
     completed = sum(1 for task in routine.tasks if task.completed)
     total = len(routine.tasks)
@@ -652,10 +656,8 @@ def render_routine_preview_card(routine: DailyRoutine):
             for task in routine.tasks:
                 categories[task.category] = categories.get(task.category, 0) + 1
 
-            st.markdown("**Categories:** " + " ".join([
-                get_category_badge(f"{cat} ({count})")
-                for cat, count in categories.items()
-            ]), unsafe_allow_html=True)
+            category_text = ", ".join([f"{cat} ({count})" for cat, count in categories.items()])
+            st.markdown(f"**Categories:** {category_text}")
 
             # Time overview
             total_duration = sum(task.duration for task in routine.tasks)
@@ -679,7 +681,7 @@ def render_routine_preview_card(routine: DailyRoutine):
                 annotations=[dict(text=f'{completed}/{total}', x=0.5, y=0.5, font_size=14, showarrow=False)]
             )
 
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, key=f"preview_chart_{routine.id}_{index}")
 
         # Task summary
         st.markdown("**Tasks:**")
@@ -902,10 +904,8 @@ def render_enhanced_create_routine():
             for task in tasks:
                 category_counts[task.category] = category_counts.get(task.category, 0) + 1
 
-            st.markdown("**Category Breakdown:** " + " ".join([
-                get_category_badge(f"{cat} ({count})")
-                for cat, count in category_counts.items()
-            ]), unsafe_allow_html=True)
+            category_summary = ", ".join([f"{cat} ({count})" for cat, count in category_counts.items()])
+            st.markdown(f"**Category Breakdown:** {category_summary}")
 
         # Submit button
         submitted = st.form_submit_button("🚀 Create Routine", type="primary", use_container_width=True)
@@ -1008,7 +1008,7 @@ def render_enhanced_manage_routines():
                 title="Task Completion"
             )
 
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, key=f"manage_chart_{routine.id}")
 
         # Task breakdown by category
         with st.expander("📊 Category Analysis", expanded=True):
@@ -1039,7 +1039,7 @@ def render_enhanced_manage_routines():
                 height=300
             )
 
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, key=f"category_chart_{routine.id}")
 
         # Quick task overview
         with st.expander("📋 Quick Task Overview"):
