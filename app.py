@@ -9,6 +9,7 @@ from data_manager import get_data_manager
 from daily_routines import render_daily_routines_page, get_today_routine
 from workout_plans import render_workout_plans_page, get_workout_stats
 from diet_plans import render_diet_plans_page, get_diet_stats
+from recommendations import render_recommendations_dashboard, get_recommendation_summary
 
 # Configure Streamlit page with improved styling
 st.set_page_config(
@@ -48,6 +49,24 @@ st.markdown("""
         margin: 0.5rem 0 0 0;
         opacity: 0.9;
         font-size: 1rem;
+    }
+
+    /* AI Recommendations card styling */
+    .ai-card {
+        background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+        padding: 1.5rem;
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        margin: 0.5rem 0;
+        box-shadow: 0 4px 15px 0 rgba(31, 38, 135, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        animation: pulse-glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse-glow {
+        from { box-shadow: 0 4px 15px 0 rgba(31, 38, 135, 0.37); }
+        to { box-shadow: 0 8px 25px 0 rgba(31, 38, 135, 0.6); }
     }
 
     /* Progress bars */
@@ -97,6 +116,74 @@ st.markdown("""
     .stButton > button:hover {
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Recommendation notification */
+    .recommendation-alert {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+        border-radius: 10px;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-left: 5px solid #ff6b9d;
+    }
+
+    /* Advanced AI status indicators */
+    .ai-status-mastered {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        animation: glow-success 2s ease-in-out infinite alternate;
+    }
+
+    .ai-status-optimizing {
+        background: linear-gradient(135deg, #17a2b8 0%, #20c997 100%);
+        animation: glow-info 3s ease-in-out infinite alternate;
+    }
+
+    .ai-status-analyzing {
+        background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+        animation: glow-warning 2.5s ease-in-out infinite alternate;
+    }
+
+    .ai-status-learning {
+        background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+        animation: glow-learning 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow-success {
+        from { box-shadow: 0 4px 15px 0 rgba(40, 167, 69, 0.4); }
+        to { box-shadow: 0 8px 25px 0 rgba(40, 167, 69, 0.7); }
+    }
+
+    @keyframes glow-info {
+        from { box-shadow: 0 4px 15px 0 rgba(23, 162, 184, 0.4); }
+        to { box-shadow: 0 8px 25px 0 rgba(23, 162, 184, 0.7); }
+    }
+
+    @keyframes glow-warning {
+        from { box-shadow: 0 4px 15px 0 rgba(255, 193, 7, 0.4); }
+        to { box-shadow: 0 8px 25px 0 rgba(255, 193, 7, 0.7); }
+    }
+
+    @keyframes glow-learning {
+        from { box-shadow: 0 4px 15px 0 rgba(111, 66, 193, 0.4); }
+        to { box-shadow: 0 8px 25px 0 rgba(111, 66, 193, 0.7); }
+    }
+
+    /* Urgent alert animations */
+    .urgent-alert {
+        background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        animation: pulse-urgent 1.5s ease-in-out infinite alternate;
+        border: 2px solid #ff6b6b;
+    }
+
+    @keyframes pulse-urgent {
+        from { 
+            box-shadow: 0 4px 15px 0 rgba(220, 53, 69, 0.5);
+            transform: scale(1);
+        }
+        to { 
+            box-shadow: 0 8px 30px 0 rgba(220, 53, 69, 0.8);
+            transform: scale(1.02);
+        }
     }
 
     /* Hide streamlit branding */
@@ -151,11 +238,14 @@ def create_progress_chart(routine_data):
 
 
 def render_enhanced_metrics():
-    """Render enhanced metric cards"""
+    """Render enhanced metric cards with AI recommendations"""
     dm = get_data_manager()
     stats = dm.get_stats()
 
-    col1, col2, col3 = st.columns(3)
+    # Get AI recommendations summary
+    rec_summary = get_recommendation_summary()
+
+    col1, col2, col3, col4 = st.columns(4)
 
     with col1:
         st.markdown(f"""
@@ -181,6 +271,94 @@ def render_enhanced_metrics():
         </div>
         """, unsafe_allow_html=True)
 
+    with col4:
+        if rec_summary['total'] > 0:
+            ai_status = rec_summary['ai_status']
+            confidence = rec_summary['ai_confidence']
+
+            # Choose color based on AI maturity
+            if ai_status == "Mastered":
+                gradient = "linear-gradient(135deg, #28a745 0%, #20c997 100%)"
+            elif ai_status == "Optimizing":
+                gradient = "linear-gradient(135deg, #17a2b8 0%, #20c997 100%)"
+            elif ai_status == "Analyzing":
+                gradient = "linear-gradient(135deg, #ffc107 0%, #fd7e14 100%)"
+            else:  # Learning
+                gradient = "linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%)"
+
+            st.markdown(f"""
+            <div style="background: {gradient}; padding: 1.5rem; border-radius: 15px; color: white; text-align: center; margin: 0.5rem 0; box-shadow: 0 4px 15px 0 rgba(31, 38, 135, 0.37);">
+                <h3 style="margin: 0; font-size: 2.5rem; font-weight: bold;">🤖 {confidence:.0%}</h3>
+                <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 1rem;">AI {ai_status}</p>
+            </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.markdown(f"""
+            <div class="metric-card">
+                <h3>🤖 AI</h3>
+                <p>Initializing...</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+
+def render_ai_recommendations_banner():
+    """Render enhanced AI recommendations banner with smart notifications"""
+    rec_summary = get_recommendation_summary()
+
+    if rec_summary['total'] > 0:
+        urgent = rec_summary['urgent_interventions']
+        high_priority = rec_summary['high_priority']
+        ai_status = rec_summary['ai_status']
+        confidence = rec_summary['ai_confidence']
+
+        # Urgent interventions (critical)
+        if urgent > 0:
+            st.markdown(f"""
+            <div style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); 
+                        padding: 1.5rem; border-radius: 15px; color: white; margin: 1rem 0;
+                        animation: pulse-urgent 1.5s ease-in-out infinite alternate;">
+                <strong>🚨 URGENT AI ALERT:</strong> I've detected <strong>{urgent} critical wellness issue{'' if urgent == 1 else 's'}</strong> 
+                that need immediate attention! <em>Your health trajectory requires intervention.</em>
+            </div>
+            <style>
+            @keyframes pulse-urgent {{
+                from {{ box-shadow: 0 4px 15px 0 rgba(220, 53, 69, 0.5); }}
+                to {{ box-shadow: 0 8px 30px 0 rgba(220, 53, 69, 0.8); }}
+            }}
+            </style>
+            """, unsafe_allow_html=True)
+
+        # High priority recommendations
+        elif high_priority > 0:
+            st.markdown(f"""
+            <div class="recommendation-alert">
+                <strong>🔥 AI Wellness Coach:</strong> I've identified <strong>{high_priority} high-impact</strong> 
+                optimization{'' if high_priority == 1 else 's'} that could significantly boost your performance! 
+                <em>Your {ai_status.lower()} AI is {confidence:.0%} confident in these insights.</em>
+            </div>
+            """, unsafe_allow_html=True)
+
+        # General AI insights
+        elif rec_summary['total'] >= 3:
+            intervention_count = rec_summary.get('ai_interventions', 0)
+
+            if intervention_count > 0:
+                st.info(
+                    f"🤖 **Advanced AI Coach:** Your wellness profile is {confidence:.0%} analyzed. I've found **{intervention_count} proactive interventions** and **{rec_summary['total'] - intervention_count} standard recommendations** to optimize your journey!")
+            else:
+                st.info(
+                    f"🤖 **Smart AI:** I've analyzed your patterns and found **{rec_summary['total']} personalized suggestions** to optimize your wellness journey!")
+
+        # Learning phase
+        elif ai_status == "Learning":
+            st.info(
+                "🌱 **AI Learning:** Your AI coach is building your wellness profile. Keep using the app to unlock advanced personalized insights!")
+
+    else:
+        # No recommendations yet - encourage engagement
+        st.info(
+            "🤖 **AI Initialization:** Complete a few more routines to activate your personal AI wellness coach with real-time insights and proactive health interventions!")
+
 
 def render_dashboard():
     """Render the enhanced main dashboard page"""
@@ -196,6 +374,9 @@ def render_dashboard():
     st.markdown(f"# {greeting}")
     st.markdown("### Welcome to your Personal Wellness Hub")
     st.markdown("*Track your daily routines, workouts, and nutrition all in one place.*")
+
+    # AI Recommendations Banner
+    render_ai_recommendations_banner()
 
     # Enhanced metrics
     render_enhanced_metrics()
@@ -268,6 +449,55 @@ def render_dashboard():
             if fig:
                 st.plotly_chart(fig, use_container_width=True)
 
+        # AI Recommendations preview
+        rec_summary = get_recommendation_summary()
+        if rec_summary['total'] > 0:
+            st.markdown("**🤖 AI Wellness Coach**")
+
+            # Show AI status
+            ai_status = rec_summary['ai_status']
+            confidence = rec_summary['ai_confidence']
+
+            status_colors = {
+                'Learning': '🟡',
+                'Analyzing': '🔵',
+                'Optimizing': '🟢',
+                'Mastered': '⭐'
+            }
+
+            st.markdown(
+                f"{status_colors.get(ai_status, '🤖')} **AI Status:** {ai_status} (Confidence: {confidence:.0%})")
+
+            # Show available insights
+            if rec_summary['ai_interventions'] > 0:
+                st.markdown(f"• **{rec_summary['ai_interventions']}** proactive AI interventions")
+            if rec_summary['workouts'] > 0:
+                st.markdown(f"• **{rec_summary['workouts']}** smart workout suggestions")
+            if rec_summary['meals'] > 0:
+                st.markdown(f"• **{rec_summary['meals']}** personalized meal ideas")
+            if rec_summary['routine_tips'] > 0:
+                st.markdown(f"• **{rec_summary['routine_tips']}** routine optimizations")
+            if rec_summary['scheduling'] > 0:
+                st.markdown(f"• **{rec_summary['scheduling']}** timing improvements")
+
+            # Urgent alerts
+            if rec_summary['urgent_interventions'] > 0:
+                st.error(f"🚨 **{rec_summary['urgent_interventions']} urgent AI alerts** - Check recommendations now!")
+
+            # Real-time coaching preview
+            if confidence > 0.6:
+                from recommendations import SmartRecommendationsEngine
+                engine = SmartRecommendationsEngine()
+                real_time_coaching = engine.get_real_time_coaching()
+
+                if real_time_coaching.get('confidence', 0) > 0.5:
+                    st.markdown("**🎯 Right Now:**")
+                    st.info(
+                        f"⚡ {real_time_coaching.get('energy_level', 'Moderate')} energy period - {real_time_coaching.get('recommended_activity', 'Continue current activities')}")
+
+            if st.button("🤖 Open AI Wellness Coach", type="primary", use_container_width=True):
+                st.switch_page("smart_recommendations")
+
         # Quick stats with improved styling
         workout_stats = get_workout_stats()
         diet_stats = get_diet_stats()
@@ -331,17 +561,18 @@ def render_dashboard():
     st.markdown("---")
     st.subheader("🚀 Quick Actions")
 
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
 
     action_buttons = [
         ("📅 Today's Tasks", "daily_routines", "🎯"),
+        ("🤖 AI Suggestions", "smart_recommendations", "🔮"),
         ("💪 Workouts", "workout_plans", "🏋️"),
         ("🥗 Nutrition", "diet_plans", "🍎"),
         ("📤 Backup", "import_export", "💾")
     ]
 
     for i, (label, page, icon) in enumerate(action_buttons):
-        with [col1, col2, col3, col4][i]:
+        with [col1, col2, col3, col4, col5][i]:
             if st.button(f"{icon} {label.split(' ', 1)[1]}", use_container_width=True, key=f"action_{i}"):
                 st.switch_page(page)
 
@@ -528,7 +759,7 @@ def main():
         # Navigation with better styling
         page = st.selectbox(
             "🧭 Navigate:",
-            ["Dashboard", "Daily Routines", "Workout Plans", "Diet Plans", "Data Management"],
+            ["Dashboard", "Daily Routines", "Smart Recommendations", "Workout Plans", "Diet Plans", "Data Management"],
             index=0
         )
 
@@ -537,6 +768,7 @@ def main():
         # Enhanced quick stats
         dm = get_data_manager()
         stats = dm.get_stats()
+        rec_summary = get_recommendation_summary()
 
         st.markdown("**📊 Overview**")
         for icon, label, value in [
@@ -545,6 +777,38 @@ def main():
             ("🥗", "Diet Plans", stats['diets'])
         ]:
             st.markdown(f"{icon} **{value}** {label}")
+
+        # AI Recommendations summary
+        if rec_summary['total'] > 0:
+            st.markdown("---")
+            st.markdown("**🤖 AI Wellness Coach**")
+
+            # AI Status indicator
+            ai_status = rec_summary['ai_status']
+            confidence = rec_summary['ai_confidence']
+
+            status_emojis = {
+                'Learning': '🌱',
+                'Analyzing': '🔍',
+                'Optimizing': '⚡',
+                'Mastered': '🎯'
+            }
+
+            st.markdown(f"{status_emojis.get(ai_status, '🤖')} **{ai_status}** ({confidence:.0%})")
+
+            # Alert for urgent interventions
+            if rec_summary['urgent_interventions'] > 0:
+                st.error(f"🚨 **{rec_summary['urgent_interventions']}** urgent alerts")
+            elif rec_summary['high_priority'] > 0:
+                st.warning(f"⚠️ **{rec_summary['high_priority']}** priority items")
+            else:
+                st.success(f"✨ **{rec_summary['total']}** AI insights available")
+
+            # Wellness profile completeness
+            if rec_summary['has_wellness_profile']:
+                profile_completeness = rec_summary['profile_completeness']
+                st.progress(profile_completeness)
+                st.caption(f"Profile: {profile_completeness:.0%} complete")
 
         # Today's progress in sidebar
         today_routine = get_today_routine()
@@ -565,15 +829,17 @@ def main():
 
         # Footer with enhanced branding
         st.markdown("---")
-        st.markdown("**🏃‍♂️ Wellness Hub v2.0**")
-        st.markdown("*Built with ❤️ for your health*")
-        st.markdown("*Stay strong, stay focused!* 💪")
+        st.markdown("**🏃‍♂️ Wellness Hub v3.0**")
+        st.markdown("*Powered by Advanced AI* 🤖✨")
+        st.markdown("*Your Personal Wellness Intelligence* 🧠")
 
     # Route to appropriate page
     if page == "Dashboard":
         render_dashboard()
     elif page == "Daily Routines":
         render_daily_routines_page()
+    elif page == "Smart Recommendations":
+        render_recommendations_dashboard()
     elif page == "Workout Plans":
         render_workout_plans_page()
     elif page == "Diet Plans":
