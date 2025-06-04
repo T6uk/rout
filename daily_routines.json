@@ -154,7 +154,7 @@
         "time": "06:00",
         "duration": 20,
         "category": "Morning",
-        "completed": false
+        "completed": true
       },
       {
         "id": "task017",
@@ -163,7 +163,7 @@
         "time": "06:30",
         "duration": 60,
         "category": "Exercise",
-        "completed": false
+        "completed": true
       },
       {
         "id": "task018",
@@ -172,7 +172,7 @@
         "time": "07:30",
         "duration": 30,
         "category": "Morning",
-        "completed": false
+        "completed": true
       },
       {
         "id": "task019",
@@ -181,7 +181,7 @@
         "time": "08:00",
         "duration": 120,
         "category": "Work",
-        "completed": false
+        "completed": true
       },
       {
         "id": "task020",
@@ -190,7 +190,7 @@
         "time": "10:00",
         "duration": 5,
         "category": "Personal",
-        "completed": false
+        "completed": true
       },
       {
         "id": "task021",
@@ -199,7 +199,7 @@
         "time": "10:05",
         "duration": 115,
         "category": "Work",
-        "completed": false
+        "completed": true
       },
       {
         "id": "task022",
@@ -208,7 +208,7 @@
         "time": "12:00",
         "duration": 60,
         "category": "Personal",
-        "completed": false
+        "completed": true
       },
       {
         "id": "task023",
@@ -217,7 +217,7 @@
         "time": "13:00",
         "duration": 120,
         "category": "Work",
-        "completed": false
+        "completed": true
       },
       {
         "id": "task024",
@@ -244,7 +244,7 @@
         "time": "17:30",
         "duration": 60,
         "category": "Personal",
-        "completed": false
+        "completed": true
       },
       {
         "id": "task027",

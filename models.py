@@ -2,9 +2,11 @@ from dataclasses import dataclass, asdict
 from typing import List
 import uuid
 
+
 def generate_id() -> str:
     """Generate a unique 8-character ID"""
     return str(uuid.uuid4())[:8]
+
 
 @dataclass
 class RoutineTask:
@@ -16,6 +18,7 @@ class RoutineTask:
     category: str
     completed: bool = False
 
+
 @dataclass
 class DailyRoutine:
     id: str
@@ -23,6 +26,7 @@ class DailyRoutine:
     date: str
     tasks: List[RoutineTask]
     notes: str = ""
+
 
 @dataclass
 class Exercise:
@@ -33,6 +37,7 @@ class Exercise:
     weight: str
     notes: str = ""
 
+
 @dataclass
 class WorkoutPlan:
     id: str
@@ -42,6 +47,7 @@ class WorkoutPlan:
     target_muscle_groups: List[str]
     difficulty: str
     estimated_duration: int  # minutes
+
 
 @dataclass
 class Meal:
@@ -54,6 +60,7 @@ class Meal:
     ingredients: List[str]
     notes: str = ""
 
+
 @dataclass
 class DietPlan:
     id: str
@@ -65,9 +72,11 @@ class DietPlan:
     daily_carbs: float
     daily_fat: float
 
+
 # Utility functions for converting dictionaries to objects
 def dict_to_routine_task(d: dict) -> RoutineTask:
     return RoutineTask(**d)
+
 
 def dict_to_daily_routine(d: dict) -> DailyRoutine:
     tasks = [dict_to_routine_task(task) for task in d['tasks']]
@@ -79,8 +88,10 @@ def dict_to_daily_routine(d: dict) -> DailyRoutine:
         notes=d.get('notes', '')
     )
 
+
 def dict_to_exercise(d: dict) -> Exercise:
     return Exercise(**d)
+
 
 def dict_to_workout_plan(d: dict) -> WorkoutPlan:
     exercises = [dict_to_exercise(ex) for ex in d['exercises']]
@@ -94,8 +105,10 @@ def dict_to_workout_plan(d: dict) -> WorkoutPlan:
         estimated_duration=d['estimated_duration']
     )
 
+
 def dict_to_meal(d: dict) -> Meal:
     return Meal(**d)
+
 
 def dict_to_diet_plan(d: dict) -> DietPlan:
     meals = [dict_to_meal(meal) for meal in d['meals']]
